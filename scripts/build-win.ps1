@@ -10,7 +10,7 @@ try {
     if (-not $env:ROXY_ELECTRON_DIST -and (Test-Path -LiteralPath (Join-Path $localElectronDist 'electron.exe'))) {
         $env:ROXY_ELECTRON_DIST = $localElectronDist
     }
-    $builderArgs = @('exec', 'electron-builder', '--win', 'nsis', '--x64')
+    $builderArgs = @('exec', 'electron-builder', '--win', 'nsis', '--x64', '--publish', 'never')
     if ($env:ROXY_ELECTRON_DIST) {
         $builderArgs += "-c.electronDist=$($env:ROXY_ELECTRON_DIST)"
     }
