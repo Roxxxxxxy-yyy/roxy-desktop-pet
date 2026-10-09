@@ -12,7 +12,11 @@
 - 70%～140% 大小调整；隐藏、退出及托盘操作
 - 语言与大小选择保存在本机
 
-## 运行
+## 下载与安装
+
+在 [Releases](https://github.com/Roxxxxxxy-yyy/roxy-desktop-pet/releases) 下载 `RoxyDesktopPet-Setup-*-x64.exe`，双击安装。安装包包含运行所需的 Electron，不必另外安装 Node.js 或 pnpm。此版本尚未进行代码签名，Windows 可能显示安全提示；请只从本仓库的 Releases 下载。
+
+## 从源码运行或构建
 
 需要 Windows、Node.js 和 pnpm。在项目目录运行：
 
@@ -22,6 +26,8 @@ pnpm start
 ```
 
 安装完成后，可双击 `启动桌宠.cmd`。将鼠标移到角色上即可显示控制栏，在左侧的语言菜单选择 `中文`、`日本語` 或 `English`。
+
+要在 Windows 上生成安装包，运行 `pnpm run build:win`，输出位于 `dist/`。
 
 ## 素材与说明
 

@@ -12,7 +12,11 @@ This is an unofficial fan project featuring Roxy from *Mushoku Tensei*. It is no
 - 70%–140% size adjustment, hide and quit controls, and a tray menu
 - Language and size preferences saved locally
 
-## Run
+## Download and install
+
+Download `RoxyDesktopPet-Setup-*-x64.exe` from [Releases](https://github.com/Roxxxxxxy-yyy/roxy-desktop-pet/releases) and run it. The installer includes Electron; Node.js and pnpm are not needed to use the installed app. This build is not code-signed, so Windows may show a security warning. Download it only from this repository's Releases.
+
+## Run or build from source
 
 Requires Windows, Node.js, and pnpm. From the project folder, run:
 
@@ -22,6 +26,8 @@ pnpm start
 ```
 
 After installation, you can also double-click `启动桌宠.cmd`. Hover over the character and choose `中文`, `日本語`, or `English` in the language menu.
+
+On Windows, run `pnpm run build:win` to create an installer in `dist/`.
 
 The character and original work remain the property of their respective rights holders. Original anime artwork and earlier image drafts are not included.
 

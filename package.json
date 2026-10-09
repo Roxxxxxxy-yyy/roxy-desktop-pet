@@ -2,13 +2,49 @@
   "name": "roxy-desktop-pet",
   "version": "0.1.0",
   "private": true,
+  "author": "Roxxxxxxy-yyy",
+  "packageManager": "pnpm@11.25.0",
   "description": "A Codex-assisted Windows desktop pet experiment with Chinese, Japanese, and English text.",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron ."
+    "dev": "electron .",
+    "build:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-win.ps1"
   },
   "devDependencies": {
-    "electron": "^38.1.2"
+    "electron": "^38.1.2",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.github.roxxxxxxyyyy.roxydesktoppet",
+    "productName": "洛琪希桌宠",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/chibi-v4/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "executableName": "RoxyDesktopPet"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerLanguages": ["zh_CN", "ja_JP", "en_US"],
+      "artifactName": "RoxyDesktopPet-Setup-${version}-${arch}.${ext}"
+    }
   }
 }
