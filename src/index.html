@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>洛琪希桌宠</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="pet" aria-label="洛琪希桌宠">
+      <section id="bubble" class="bubble" aria-live="polite"></section>
+      <div id="controls" class="controls" aria-label="桌宠控制栏">
+        <select id="language" aria-label="语言" title="语言">
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+        </select>
+        <button id="smaller" title="缩小">−</button>
+        <span id="size-label" title="当前大小">100%</span>
+        <button id="larger" title="放大">＋</button>
+        <button id="hide" title="隐藏到托盘">—</button>
+        <button id="quit" title="退出">×</button>
+      </div>
+      <div id="character" class="character" title="拖动或轻点互动">
+        <div id="sprite-frame" class="sprite-frame">
+          <img id="character-image" src="../assets/chibi-v4/idle.png" alt="洛琪希" draggable="false" />
+        </div>
+        <div class="shadow"></div>
+      </div>
+    </main>
+    <script src="i18n.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

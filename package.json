@@ -1,0 +1,14 @@
+{
+  "name": "roxy-desktop-pet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Codex-assisted Windows desktop pet experiment with Chinese, Japanese, and English text.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^38.1.2"
+  }
+}
